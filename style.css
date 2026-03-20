@@ -76,11 +76,18 @@ nav a[aria-current="page"] {
 /*завдання3,4*/
 .card {
     background-color: var(--card-bg);
-    padding: 20px; 
-    border: 1px solid var(--line); 
-    border-radius: 10px; 
-    box-shadow: 0 4px 6px rgba(0,0,0,0.02); 
+    padding: 20px;
+    border: 3px solid var(--primary); 
+    border-radius: 12px; 
+    box-shadow: 0 6px 12px rgba(255, 71, 126, 0.15); 
+    transition: all 0.3s ease; 
 }
+
+    .card:hover {
+        border-color: var(--primary-hover); 
+        transform: translateY(-5px); 
+        box-shadow: 0 10px 15px rgba(255, 71, 126, 0.25); 
+    }
 /*завдання4*/
 h2::after {
     content: ""; 
