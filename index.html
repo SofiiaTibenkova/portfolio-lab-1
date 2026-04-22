@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Головна | Моє Портфоліо</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" charset="UTF-8" defer></script>
 </head>
 <body>
     <header>
         <h1>Моє Портфоліо</h1>
         <p>Вітаю на моїй особистій сторінці.</p>
+        <button id="themeToggle" class="btn">Змінити тему</button>
     </header>
 
     <nav aria-label="Навігація">
@@ -22,7 +24,7 @@
     <main>
         <section id="about">
             <h2>Про мене</h2>
-            <p>Я студентка 2 курсу і це моя <strong>перша практична робота</strong> з HTML.</p>
+            <p>Я студентка 2 курсу і це моя перша практична робота з JavaScript.</p>
             <img src="avatar.jpg" alt="Моє фото" width="200" height="200">
         </section>
 
@@ -37,25 +39,8 @@
 
         <section id="projects">
             <h2>Мої проєкти</h2>
-
-            <article class="card">
-                <h3>Проєкт 1: Квітковий магазин (Flowershop)</h3>
-                <p>Навчальний проєкт — сайт, який я розробляла для дисципліни <strong>«Цифровий бізнес»</strong>.</p>
-                <a href="Flowershop.html" target="_blank">Переглянути проєкт</a>
-            </article>
-
-            <article class="card">
-                <h3>Проєкт 2: Сайт-портфоліо</h3>
-                <p>Розробка структури цього сайту з використанням семантичних тегів HTML5.</p>
-                <a href="#projects">Детальніше</a>
-            </article>
-
-            <h3>Етапи виконання</h3>
-            <ol>
-                <li>Аналіз завдання</li>
-                <li>Написання коду</li>
-                <li>Тестування</li>
-            </ol>
+            <input type="text" id="searchInput" placeholder="Пошук проєктів за назвою...">
+            <div id="projectsList" class="projects-grid"></div>
         </section>
     </main>
 
