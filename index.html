@@ -1,51 +1,60 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Головна | Моє Портфоліо</title>
+    <title>Космічні запуски</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" charset="UTF-8" defer></script>
+    <script src="app.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Моє Портфоліо</h1>
-        <p>Вітаю на моїй особистій сторінці.</p>
-        <button id="themeToggle" class="btn">Змінити тему</button>
-    </header>
+    <div class="container">
+        <header class="hero">
+            <p class="hero__label">
+                <a href="https://thespacedevs.com/llapi" target="_blank" style="color: inherit; text-decoration: none; border-bottom: 1px dashed currentColor;">Space Launch Now API</a>
+            </p>
+            <h1>Пошук космічних запусків</h1>
+            <p class="hero__text">Відстежуйте майбутні місії провідних космічних агентств та приватних компаній по всьому світу в реальному часі.</p>
+        </header>
 
-    <nav aria-label="Навігація">
-        <ul>
-            <li><a href="index.html" aria-current="page">Головна</a></li>
-            <li><a href="contacts.html">Контакти</a></li>
-        </ul>
-    </nav>
+        <main class="section">
+            <div class="layout">
+                
+                <div class="panel">
+                    <h2>Фільтр місій</h2>
+                    <p class="panel__text">Оберіть компанію для пошуку найближчого старту.</p>
 
-    <main>
-        <section id="about">
-            <h2>Про мене</h2>
-            <p>Я студентка 2 курсу і це моя перша практична робота з JavaScript.</p>
-            <img src="avatar.jpg" alt="Моє фото" width="200" height="200">
-        </section>
+                    <label class="field">
+                        <span>Космічна компанія / Агентство</span>
+                        <select id="provider-select">
+                            <option value="">Усі запуски</option>
+                            <option value="SpaceX">SpaceX (США)</option>
+                            <option value="NASA">NASA (США)</option>
+                            <option value="ESA">ESA (Європа)</option>
+                            <option value="JAXA">JAXA (Японія)</option>
+                            <option value="Blue Origin">Blue Origin (США)</option>
+                            <option value="Rocket Lab">Rocket Lab</option>
+                            <option value="ULA">ULA</option>
+                        </select>
+                    </label>
 
-        <section id="skills">
-            <h2>Навички</h2>
-            <ul>
-                <li>Створення HTML-структури</li>
-                <li>Робота з текстом та посиланнями</li>
-                <li>Додавання зображень</li>
-            </ul>
-        </section>
+                    <div class="actions">
+                        <button id="btn" class="btn">Показати запуск</button>
+                    </div>
+                    <p id="status-text" class="status">Готово до пошуку.</p>
+                </div>
 
-        <section id="projects">
-            <h2>Мої проєкти</h2>
-            <input type="text" id="searchInput" placeholder="Пошук проєктів за назвою...">
-            <div id="projectsList" class="projects-grid"></div>
-        </section>
-    </main>
+                <div class="panel panel--preview">
+                    <div id="image-container" class="image-box">
+                        <span class="placeholder-text">Тут з'явиться фото ракети</span>
+                    </div>
+                    <h2 id="launch-title" style="font-size: 24px; margin-top: 20px;">Назва місії</h2>
+                    <div id="launch-details" class="panel__text">
+                        </div>
+                </div>
 
-    <footer>
-        <p>&copy; 2026. Усі права захищено.</p>
-    </footer>
+            </div>
+        </main>
+    </div>
 </body>
 </html>
